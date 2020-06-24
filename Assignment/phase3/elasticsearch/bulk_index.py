@@ -14,9 +14,8 @@ def index_data():
     
     for index, doc in enumerate(docs):
         doc_str = json.dumps(doc)
-        print(doc_str)
         es.index(index='paper', id=index, body=doc)
 
 
 index_data()
-
+# delete_index()
