@@ -65,7 +65,7 @@ for i, row in enumerate(p):
     if i not in dead_ends:
         p[i][:] = (1 - alpha) * row + (alpha * (v / N))
     
-#matrix
+#page ranks
 page_ranks = np.dot(x, p)
 for _ in range(10):
     page_ranks = np.dot(page_ranks, p)
